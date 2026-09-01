@@ -1,4 +1,4 @@
 interface:
-  display_name: "中文技术写作"
-  short_description: "撰写口语自然、有事实依据且可直接发布的中文技术文章"
-  default_prompt: "使用 $practical-tech-writing 写一篇有依据、少 AI 味并可直接发布的中文技术文章。"
+  display_name: "Sincerelyplz 技术写作"
+  short_description: "按个人口语化研究风格撰写中文技术文章"
+  default_prompt: "使用 $practical-tech-writing 写一篇符合我个人行文习惯、有依据、少 AI 味并可直接发布的中文技术文章。"
