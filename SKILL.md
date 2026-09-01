@@ -1,15 +1,15 @@
 ---
 name: practical-tech-writing
-description: 撰写、改写和审校口语自然、有事实依据且可直接发布的中文技术文章，覆盖 Java、后端、架构、AI、工程实践、源码原理、方案选型和项目复盘。用于用户要求写掘金或公众号技术博客、把提纲或资料扩写成文章、匹配既有作者样本、降低 AI 味、统一代码与 Markdown 排版，或补充真实可访问的参考链接时。
+description: 按 Sincerelyplz 的口语化研究写法撰写、改写和审校中文技术文章，覆盖 Java、后端、架构、AI、工程实践、源码原理、方案选型和项目复盘。用于掘金或公众号技术博客、提纲扩写、技术复盘和去除 AI 味；用户明确提供另一份作者样本时以该样本为准。
 ---
 
 # 中文技术写作
 
 ## 开始前
 
-读取 [references/style-guide.md](references/style-guide.md)。根据文章类型再读取 [references/article-patterns.md](references/article-patterns.md)。需要校准口吻或选择范文时，读取 [references/source-samples.md](references/source-samples.md)，并优先打开与当前主题最接近的 2～4 篇原文。完成初稿后，必须读取 [references/human-writing-audit.md](references/human-writing-audit.md) 并执行二次审校。
+这是一份个人写作 Skill。每次写、改或审中文技术文章时，默认采用 Sincerelyplz 的行文习惯，并以减少 AI 味为质量要求。开始前必须读取 [references/style-guide.md](references/style-guide.md) 和 [references/sincerelyplz-research-writing.md](references/sincerelyplz-research-writing.md)。根据文章类型再读取 [references/article-patterns.md](references/article-patterns.md)。需要校准口吻或选择范文时，读取 [references/source-samples.md](references/source-samples.md)，并优先打开与当前主题最接近的 2～4 篇原文。完成初稿后，必须读取 [references/human-writing-audit.md](references/human-writing-audit.md) 并执行二次审校。
 
-把用户的新要求放在既有风格之上。不要为了“像”而复刻原文中的错别字、事实错误或过时结论。
+用户明确给出另一位作者样本、指定平台语气或要求正式文风时，以最新要求为准。不要为了“像”而复刻原文中的错别字、事实错误或过时结论。
 
 ## 工作流
 
