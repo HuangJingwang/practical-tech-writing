@@ -1,0 +1,25 @@
+'use strict';
+const assert = require('node:assert/strict');
+const {render,theme} = require('./technical-diagram-kit.cjs');
+const baseline = require('../assets/technical-diagrams/baseline.scene.json');
+const svg=render(baseline);
+assert(svg.includes(theme.id));
+assert(svg.includes('markerUnits="userSpaceOnUse"'));
+assert(svg.includes(theme.colors.paper));
+assert.equal(svg,render(baseline),'Rendering must be deterministic');
+function rejects(change,pattern) { const s=structuredClone(baseline);change(s);assert.throws(()=>render(s),pattern); }
+rejects(s=>s.nodes[0].role='purple',/Unknown role/);
+rejects(s=>s.nodes[0].x=-10,/safe area/);
+rejects(s=>s.nodes[0].title='这是一个需要拆分而不能硬塞进节点的超长标题',/Title too long/);
+rejects(s=>s.nodes[1].x=48,/Overlapping nodes/);
+rejects(s=>s.edges[0].from.id='missing',/Missing node/);
+rejects(s=>s.edges[0].from.port='wrong',/Invalid port/);
+rejects(s=>s.edges[0].label.x=100,/Label overlaps node/);
+rejects(s=>{s.edges[0].dashed=true;delete s.legend;},/legend/);
+rejects(s=>s.edges[0].to={id:'write',port:'left'},/Edge crosses node/);
+const tinted=render({...baseline,background:'#F7F9FB'});
+assert(tinted.includes('<rect width="1200" height="720" fill="#F7F9FB"/>'));
+assert(tinted.includes(theme.colors.core.fill),'Background choice must preserve node colors');
+assert.equal(theme.colors.paper,'#FFFFFF','Per-scene background must not mutate the shared theme');
+rejects(s=>s.background='invalid',/six-digit hex/);
+console.log('Diagram-kit checks passed, including configurable background');

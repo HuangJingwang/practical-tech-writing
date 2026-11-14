@@ -1,0 +1,22 @@
+{
+  "id": "sincerely-tech-v1",
+  "version": "1.0.1",
+  "font": "PingFang SC",
+  "monoFont": "Menlo",
+  "colors": {
+    "paper": "#FFFFFF",
+    "ink": "#30362F",
+    "muted": "#677064",
+    "line": "#788171",
+    "border": "#CED2C8",
+    "group": "#F1F2EC",
+    "neutral": { "fill": "#FFFFFF", "stroke": "#B9C1B4" },
+    "core": { "fill": "#EAF0E6", "stroke": "#718568" },
+    "external": { "fill": "#EAF0F3", "stroke": "#758B99" },
+    "pending": { "fill": "#F7EEDB", "stroke": "#A38B56" },
+    "failure": { "fill": "#F6E9E3", "stroke": "#A77969" }
+  },
+  "type": { "title": 32, "node": 24, "label": 20, "note": 20, "code": 20 },
+  "geometry": { "width": 1200, "height": 720, "margin": 48, "radius": 12, "stroke": 1.5, "edge": 2, "arrow": 8, "padding": 20, "grid": 8 },
+  "exportScale": 2
+}

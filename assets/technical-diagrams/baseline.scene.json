@@ -1,0 +1,19 @@
+{
+  "title": "确认后再执行",
+  "subtitle": "简化流程示意 · 用于校准绘图风格，不代表项目内部实现",
+  "description": "请求经过建议生成和人工确认；确认后写入，拒绝则结束且保留原数据。",
+  "nodes": [
+    {"id":"request","x":48,"y":248,"title":"提出请求","detail":"描述需要完成的事"},
+    {"id":"proposal","x":344,"y":248,"role":"core","title":"生成建议","detail":"保留待确认内容"},
+    {"id":"confirm","x":640,"y":248,"role":"pending","shape":"decision","title":"确认？"},
+    {"id":"write","x":936,"y":248,"title":"执行写入","detail":"返回处理结果"},
+    {"id":"reject","x":640,"y":464,"role":"failure","title":"结束操作","detail":"原数据保持不变"}
+  ],
+  "edges": [
+    {"from":{"id":"request","port":"right"},"to":{"id":"proposal","port":"left"},"label":{"x":304,"y":282,"text":"提交"}},
+    {"from":{"id":"proposal","port":"right"},"to":{"id":"confirm","port":"left"},"label":{"x":600,"y":282,"text":"展示"}},
+    {"from":{"id":"confirm","port":"right"},"to":{"id":"write","port":"left"},"label":{"x":896,"y":282,"text":"确认"}},
+    {"from":{"id":"confirm","port":"bottom"},"to":{"id":"reject","port":"top"},"label":{"x":790,"y":416,"text":"拒绝"}}
+  ],
+  "legend": "实线箭头：处理顺序　　绿色：核心处理　　赭黄：待确认　　陶土红：拒绝分支"
+}
